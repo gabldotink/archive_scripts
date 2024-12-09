@@ -6,7 +6,7 @@ export d
 g(){ if [ -d "$d/$2" ]
 then cd "$d/$2"
 git pull -v --progress --recurse-submodules=no --show-forced-updates
-else git clone -lvoorigin --no-hardlinks -- "$d/../git/$1/$2" "$d/$2"
+else git clone -lvoorigin --no-hardlinks -- "$d/../git/$1/$2/.git" "$d/$2"
 fi
 cd "$d"
 }
