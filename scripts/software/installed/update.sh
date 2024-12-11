@@ -1,7 +1,7 @@
 #!/bin/sh
 set -x
 export POSIXLY_CORRECT
-d="$(dirname "$0")"
+d="$(realpath "$(dirname "$0")")"
 export d
 g(){ if [ -d "$d/$2" ]
 then cd "$d/$2"
